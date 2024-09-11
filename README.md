@@ -1,31 +1,35 @@
+## Getting Started
 
-# Blue Rabbit Code Challenge
+First, run the development server:
 
-Fork this repo and create a Full Stack app using languages and frameworks of your choice that 
-*literally* introduces you to us. Submit your response back to us here in the form of a pull 
-request or submit it to us privately. Please don't spend more than a couple hours on it. It's ok
-if you don't finish, just tackle the requirements in order and take it as far as you can in the time frame.
+```bash
+Install
+npm install
+# or
+pnpm install
+# or
+yarn install
+```
 
-Include A README with instructions on how to build/run the app. Use the README to let us know
-why you chose the technologies you did. Notes on design patterns, challenges, or aspects
-of your stack that you find interesting are also appreciated!
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-### Requirements
-1. Create an API with an endpoint or operation that we can call that tells us your name. The shape of the data 
-and the storage mechanism are up to you. It's ok if it takes no params and returns only your name.
-2. Create a minimal frontend that calls your api and displays your name when we run it.
-3. Add an API endpoint or operation that takes a name and stores it.
-4. Add an input to the frontend that we can use to submit a name to the endpoint or operation you just created.  
-5. Add an input to the frontend that lets us upload an image avatar and submit it to your API.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## Approach
 
+- This project was build with [Next.js](https://nextjs.org) bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+The backend and frontend are encapsulate into one app to reduce complexity. Next.js provides the option to build API route so it was the most effient framework for this challenge.
+If this was a large product with complex business logic. It will be best to implement the backend in its own repository. 
+- This product also utilizes MongoDB. Which was a good choice for this challenge for spend and simplicity.
+- For file upload, assests are stored on the filesystem for simplicity. Normally an S3 bucket or any form of cloud environment that can host files will be ideal.
 
-
-
-
-
-    
-
-
-
-
+## Notes
+Rename ``env.file`` to ``.env`` for MONGO DB connection string 
